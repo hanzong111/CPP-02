@@ -6,28 +6,35 @@
 /*   By: ojing-ha <ojing-ha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 23:57:58 by ojing-ha          #+#    #+#             */
-/*   Updated: 2023/03/13 01:22:18 by ojing-ha         ###   ########.fr       */
+/*   Updated: 2023/03/15 00:22:14 by ojing-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FIXED_HPP
 # define FIXED_HPP
 
-# include <iostream>
-# include <string>
+#include <iostream>
+#include <string>
+#include <cmath>
 
 class Fixed
 {
 	public	:
 				Fixed();
-				Fixed(Fixed &a);
+				Fixed(const Fixed &a);
+				Fixed(const int	input);
+				Fixed(const float input);
 				~Fixed();
-				Fixed	&operator=(Fixed &src);
+				Fixed	&operator=(const Fixed &src);
 				int		getRawBits(void) const;
 				void	setRawBits(const int input);
+				float	toFloat(void) const;
+				int		toInt(void) const;
 	private	:
 				int					num;
 				static const int	bits = 8;
 };
+
+std::ostream	&operator<<(std::ostream &out, const Fixed &src);
 
 #endif
