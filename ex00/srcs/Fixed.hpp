@@ -6,7 +6,7 @@
 /*   By: ojing-ha <ojing-ha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 23:57:58 by ojing-ha          #+#    #+#             */
-/*   Updated: 2023/03/13 01:22:18 by ojing-ha         ###   ########.fr       */
+/*   Updated: 2023/05/19 11:33:14 by ojing-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,13 @@
 class Fixed
 {
 	public	:
-				Fixed();
+				/*	Orthodox Canonical Class Form */
 				Fixed(Fixed &a);
-				~Fixed();
 				Fixed	&operator=(Fixed &src);
+				Fixed();
+				~Fixed();
+
+				/*	Member Functions */
 				int		getRawBits(void) const;
 				void	setRawBits(const int input);
 	private	:

@@ -6,7 +6,7 @@
 /*   By: ojing-ha <ojing-ha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 16:41:59 by ojing-ha          #+#    #+#             */
-/*   Updated: 2023/03/15 23:33:50 by ojing-ha         ###   ########.fr       */
+/*   Updated: 2023/05/19 11:58:07 by ojing-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,6 @@ int main( void )
 	std::cout << a << std::endl;
 	std::cout << b << std::endl;
 	std::cout << Fixed::max( a, b ) << std::endl;
+	std::cout << a + b << std::endl;
 	return 0;
 }
